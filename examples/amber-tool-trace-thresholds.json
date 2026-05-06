@@ -1,0 +1,17 @@
+{
+  "repo": "amber-tool-trace-stack",
+  "thresholds": {
+    "signal": 2,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 162,
+    "watch": 99
+  },
+  "terms": [
+    "file span",
+    "terminal width",
+    "argument risk",
+    "report density"
+  ]
+}
