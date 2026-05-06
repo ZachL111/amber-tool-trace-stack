@@ -1,0 +1,73 @@
+{
+  "repo": "amber-tool-trace-stack",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for trace analysis with capacity fixtures, allocation and spill reports, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "file span",
+      "terminal width",
+      "argument risk",
+      "report density"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "file span",
+      "signal": 43,
+      "slack": 37,
+      "drag": 28,
+      "confidence": 45,
+      "score": 84,
+      "lane": "hold"
+    },
+    {
+      "name": "stress",
+      "focus": "terminal width",
+      "signal": 74,
+      "slack": 45,
+      "drag": 8,
+      "confidence": 70,
+      "score": 239,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "argument risk",
+      "signal": 65,
+      "slack": 36,
+      "drag": 26,
+      "confidence": 88,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "report density",
+      "signal": 82,
+      "slack": 53,
+      "drag": 21,
+      "confidence": 55,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "file span",
+      "signal": 81,
+      "slack": 37,
+      "drag": 9,
+      "confidence": 72,
+      "score": 244,
+      "lane": "ship"
+    }
+  ]
+}
